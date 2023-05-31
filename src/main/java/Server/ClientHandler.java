@@ -39,6 +39,7 @@ public class ClientHandler implements Runnable {
             try {
                 requestString = input.readUTF();
                 if(requestString.equals("Exit")) {
+                    System.out.println("Client " + clientIPAddress + " exited");
                     output.close();
                     input.close();
                     clientSocket.close();
